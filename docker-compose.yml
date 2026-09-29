@@ -1,0 +1,13 @@
+services:
+  bot:
+    build: .
+    image: discord-bot
+    container_name: discord-bot
+    restart: unless-stopped
+    env_file: .env
+    mem_limit: 128m
+    logging:
+      driver: json-file
+      options:
+        max-size: 10m
+        max-file: "2"

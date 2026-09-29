@@ -24,4 +24,6 @@ The bot includes:
 4. Add reaction role rules in `src/config.js`. Each entry is a message id, an emoji, and a role id. The bot's role needs to sit above the roles it assigns.
 5. Run `npm install`, then `npm start`.
 
+On a NAS, from this folder: `docker compose up -d --build`. The image does not contain `.env`; Compose reads it from the host. The container is limited to 128 MB of RAM. Logs rotate at 10 MB.
+
 Moderation commands (registered to `GUILD_ID` on startup): `/kick`, `/ban`, `/unban`, `/timeout`, `/clear`. Bans, unbans, deleted messages, and edited messages go to the log channel. Kicks, timeouts, and clears are logged from the command.
